@@ -6,6 +6,12 @@ import java.io.InputStream;
 import java.io.OutputStream;
 
 public class ElastosWalletUtils {
+	static {
+		System.loadLibrary("spvsdk");
+		System.loadLibrary("idchain");
+		System.loadLibrary("elastoswallet");
+	}
+
     public static void InitConfig(Context context, String rootPath) {
         String[] names={"CoinConfig.json",
                 "mnemonic_chinese.txt",

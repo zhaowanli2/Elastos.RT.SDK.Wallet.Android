@@ -18,7 +18,6 @@ android {
 
         externalNativeBuild {
             cmake {
-                //cppFlags "-std=c++11", "-D_GNUC", "-D_linux", "-D_UNDEFDLLEXP", "-fvisibility=hidden"
                 cppFlags "-fexceptions -frtti -std=c++11 -D_linux -D_GNUC -fvisibility=hidden -D_UNDEFDLLEXP"
                 arguments "-DANDROID_STL=c++_shared"
             }
@@ -39,5 +38,4 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-//    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
 }
